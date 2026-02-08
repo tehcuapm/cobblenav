@@ -6,7 +6,6 @@
   "tag.item.cobblenav.pokenav": "PokéNav",
   "tag.item.cobblenav.dyed_pokenav": "Dyed PokéNav",
   "item.cobblenav.pokenav_item": "PokéNav",
-  "item.cobblenav.pokefinder_item": "PokéFinder",
   "item.cobblenav.fishingnav_item": "FishingNav",
   "item.cobblenav.fishingnav_item.tooltip": "Hold SHIFT to open while fishing",
   "item.cobblenav.pokenav_item.base": "Base",
@@ -40,7 +39,6 @@
   "gui.cobblenav.support.potential_stars": "The stars that appear on the top left represent the number of perfect stats.",
   "gui.cobblenav.support.stats_table": "The Pokémon's species name, elemental type, ability, and egg move, if present, are displayed in the table at the bottom right.",
   "gui.cobblenav.support.track_button": "Pressing the “Let's track it down!” button will switch the PokéNav into tracking mode. By following the arrow, you will be able to track the Pokémon you have found. Re-opening the PokéNav will automatically end the tracking.",
-  "gui.cobblenav.support.pokefinder_button": "Clicking the adjacent button will set your PokéFinder to track this species of Pokémon.",
   "gui.cobblenav.info_button.header.name": "Name",
   "gui.cobblenav.info_button.body.name": "Name of the species of Pokémon found",
   "gui.cobblenav.info_button.header.type": "Type",
@@ -49,7 +47,6 @@
   "gui.cobblenav.info_button.body.ability": "Ability of the Pokémon found. Marked with an exclamation mark if the ability is hidden",
   "gui.cobblenav.info_button.header.egg_move": "Egg Move",
   "gui.cobblenav.info_button.body.egg_move": "Egg move of the Pokémon found. Marked with an exclamation mark if present",
-  "gui.cobblenav.notification.pokefinder_updated": "Pokémon added to PokéFinder",
 
   "gui.cobblenav.species": "Species",
   "gui.cobblenav.aspects": "Aspects",
