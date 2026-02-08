@@ -1,7 +1,6 @@
 package com.metacontent.cobblenav
 
 import com.metacontent.cobblenav.item.Fishingnav
-import com.metacontent.cobblenav.item.Pokefinder
 import com.metacontent.cobblenav.item.Pokenav
 import com.metacontent.cobblenav.item.PokenavModelType
 import com.metacontent.cobblenav.registry.RegistryProvider
@@ -40,23 +39,10 @@ object CobblenavItems : RegistryProvider<Registry<Item>, ResourceKey<Registry<It
 
     val OLD_POKENAV = add("pokenav_item_old", Item(Item.Properties().stacksTo(16)))
 
-    // Pokefinders
-    val BLACK_POKEFINDER = pokefinderItem("black")
-    val BLUE_POKEFINDER = pokefinderItem("blue")
-    val GREEN_POKEFINDER = pokefinderItem("green")
-    val PINK_POKEFINDER = pokefinderItem("pink")
-    val RED_POKEFINDER = pokefinderItem("red")
-    val WHITE_POKEFINDER = pokefinderItem("white")
-    val YELLOW_POKEFINDER = pokefinderItem("yellow")
-
     val FISHINGNAV = add("fishingnav_item", Fishingnav())
 
     private fun pokenavItem(model: PokenavModelType): Item {
         return add(Pokenav.BASE_REGISTRY_KEY + model.modelName, Pokenav(model))
-    }
-
-    private fun pokefinderItem(color: String): Item {
-        return add(Pokefinder.BASE_REGISTRY_KEY + color, Pokefinder())
     }
 
     fun addToGroup(displayContext: ItemDisplayParameters, entries: Output) {
@@ -82,13 +68,6 @@ object CobblenavItems : RegistryProvider<Registry<Item>, ResourceKey<Registry<It
 
         entries.accept(OLD_POKENAV)
 
-        entries.accept(BLACK_POKEFINDER)
-        entries.accept(BLUE_POKEFINDER)
-        entries.accept(GREEN_POKEFINDER)
-        entries.accept(PINK_POKEFINDER)
-        entries.accept(RED_POKEFINDER)
-        entries.accept(WHITE_POKEFINDER)
-        entries.accept(YELLOW_POKEFINDER)
 
         entries.accept(FISHINGNAV)
     }

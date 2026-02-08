@@ -4,14 +4,12 @@ import com.cobblemon.mod.common.platform.events.PlatformEvents
 import com.metacontent.cobblenav.api.fishingcontext.CloudRepository
 import com.metacontent.cobblenav.api.platform.BiomePlatformRenderDataRepository
 import com.metacontent.cobblenav.api.platform.DimensionPlateRepository
-import com.metacontent.cobblenav.client.gui.overlay.PokefinderOverlay
 import com.metacontent.cobblenav.client.gui.overlay.TrackArrowOverlay
 import com.metacontent.cobblenav.client.settings.ClientSettingsDataManager
 import com.metacontent.cobblenav.client.settings.PokefinderSettings
 import com.metacontent.cobblenav.client.settings.PokenavSettings
 import com.metacontent.cobblenav.config.ClientCobblenavConfig
 import com.metacontent.cobblenav.config.Config
-import com.metacontent.cobblenav.item.Pokefinder
 import com.metacontent.cobblenav.spawndata.collector.ClientCollectors
 import net.minecraft.client.DeltaTracker
 import net.minecraft.client.Minecraft
@@ -24,11 +22,7 @@ object CobblenavClient {
     private val settingsManager = ClientSettingsDataManager
     var pokenavSettings: PokenavSettings? = null
     var pokefinderSettings: PokefinderSettings? = null
-    val pokefinderOverlay: PokefinderOverlay by lazy {
-        val overlay = PokefinderOverlay()
-        overlay.initialize()
-        overlay
-    }
+
     val trackArrowOverlay: TrackArrowOverlay by lazy { TrackArrowOverlay() }
 
     fun init(implementation: ClientImplementation) {
@@ -55,9 +49,6 @@ object CobblenavClient {
         val player = Minecraft.getInstance().player
         if (Minecraft.getInstance().screen != null) return
         player?.let {
-            if (player.handSlots.any { it.item is Pokefinder }) {
-                pokefinderOverlay.render(guiGraphics, deltaTracker)
-            }
             trackArrowOverlay.render(guiGraphics, deltaTracker)
         }
     }
